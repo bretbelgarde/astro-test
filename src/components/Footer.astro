@@ -1,0 +1,21 @@
+---
+const socials = [
+  {
+    site: "GitHub",
+    url: "https://github.com/bretbelgarde"
+  },
+  {
+    site: "LinkedIn",
+    url: "https://www.linkedin.com/in/bret-belgarde-19bb606b/"
+  },
+];
+
+---
+
+<footer>
+  <p>
+      Follow me on social media! {socials.map((platform) =>
+        <a href={platform.url}>{platform.site}</a>
+      )}
+  </p>
+</footer>
