@@ -1,4 +1,5 @@
 ---
+import Social from "./Social.astro";
 const socials = [
   {
     site: "GitHub",
@@ -13,9 +14,21 @@ const socials = [
 ---
 
 <footer>
-  <p>
+    <ul>
       Follow me on social media! {socials.map((platform) =>
-        <a href={platform.url}>{platform.site}</a>
+        <li><Social url={platform.url} site={platform.site} /></li>
       )}
-  </p>
+  </ul>
 </footer>
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  ul li {
+      display: inline-block;
+      margin-right: .5rem;
+  }
+</style>
